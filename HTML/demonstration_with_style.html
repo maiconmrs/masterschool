@@ -1,0 +1,137 @@
+<!doctype html>
+<!-- Declares this document as an HTML5 file -->
+<html lang="en">
+<!-- The <html> tag wraps all the content of the webpage. "lang=en" specifies that the page language is English. -->
+
+<head>
+    <meta charset="UTF-8">
+    <!-- Sets the character encoding to UTF-8 to support special characters and multiple languages. -->
+
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <!-- Makes the webpage responsive. It adjusts to different screen sizes and prevents zooming on mobile devices. -->
+
+    <title>My First Page</title>
+    <!-- Sets the title that appears on the browser tab. -->
+</head>
+
+<body style="
+    background-color: #ffdfd3; /* Light peach background color */
+    font-family: Comic Sans MS; /* Fun and playful font style */
+    margin: 20px; /* Adds space outside the body to prevent content from touching the screen edges */
+    padding: 20px; /* Adds space inside the body for better spacing */
+    text-align: center; /* Centers all text inside the body */
+">
+
+    <!-- Main Heading -->
+    <h1 style="
+        color: #ff4500; /* Bright orange text */
+        text-transform: uppercase; /* Converts text to uppercase */
+        text-shadow: 3px 3px yellow; /* Adds a yellow shadow to the text for a fun effect */
+    ">
+        Welcome to My First Page!
+    </h1>
+
+    <!-- Introduction Paragraph with a Colorful Background -->
+    <p style="
+        background-color: #ff22d1; /* Sets a pinkish background color */
+        font-size: 20px; /* Increases text size */
+        color: white; /* Makes text color white for better contrast */
+        background: linear-gradient(90deg, #ff5733, #ffc300, #33ff57); /* Adds a cool multi-color gradient effect */
+    ">
+        Hello! This is a simple webpage created using HTML.
+    </p>
+
+    <!-- Link to an External HTML Tutorial with Hover Effects -->
+    <p style="font-size: 20px;">
+        Learn more about HTML at
+        <a style="
+            color: #007bFF; /* Sets the link color to blue */
+            font-size: 22px; /* Increases font size */
+            font-weight: bold; /* Makes the link text bold */
+            text-decoration: none; /* Removes the underline */
+            border: 3px dashed #ff4500; /* Creates an orange dashed border */
+            padding: 10px; /* Adds space inside the link */
+            display: inline-block; /* Makes the link behave like a button */
+            transition: all 0.3s ease-in-out; /* Smooth transition effect for hover animations */
+        "
+           onmouseover="this.style.transform='scale(1.1)'; this.style.backgroundColor='#ffcc00';"
+           onmouseout="this.style.transform='scale(1)'; this.style.backgroundColor='transparent';"
+           href="https://www.w3schools.com/html/" target="_blank">
+            W3School HTML Tutorial
+        </a>
+        <!-- When hovered, the link grows slightly and changes to yellow. When mouse leaves, it returns to normal. -->
+    </p>
+
+    <!-- Section for Displaying an HTML Logo -->
+    <h2>Here's an HTML Logo:</h2>
+
+    <!-- Image with Rounded Corners and Bouncing Animation -->
+    <img src="https://images.squarespace-cdn.com/content/v1/607f89e638219e13eee71b1e/1684821560422-SD5V37BAG28BURTLIXUQ/michael-sum-LEpfefQf4rU-unsplash.jpg"
+         alt="HTML5 Logo" width="250"
+         style="
+            display: block; /* Centers the image */
+            margin: 20px auto; /* Adds space around the image */
+            border-radius: 150px; /* Makes the image circular */
+            animation: bounce 1s infinite alternate; /* Applies the bounce effect */
+         "
+    >
+
+    <!-- JavaScript to Add a Bounce Animation Dynamically -->
+    <script>
+        const style = document.createElement('style');
+        // Creates a new <style> element dynamically using JavaScript.
+
+        style.innerHTML = `
+            @keyframes bounce {
+                0% { transform: translateY(0px); }       /* Starts at the original position */
+                100% { transform: translateY(-20px); }      /* Moves up 20 pixels */
+            }
+        `;
+        // This defines an animation called "bounce" where the image moves up and down.
+
+        document.head.appendChild(style);
+        // Inserts the new <style> into the <head>, so the animation is applied to the image.
+    </script>
+
+    <!-- Section Title -->
+    <h2 style="
+        color: #ff4500; /* Sets text color to bright orange */
+        text-shadow: 2px 2px #ffff66; /* Adds a soft yellow shadow */
+    ">Why Learn HTML?</h2>
+
+    <!-- Colorful List with a Fun Background -->
+    <ul style="
+        background: #ffff4d; /* Yellow background */
+        padding: 20px; /* Adds space inside */
+        border-radius: 20px; /* Rounds the corners */
+        box-shadow: 10px 10px 15px #ff66ff; /* Adds a pink shadow for a cool effect */
+        display: inline-block; /* Makes the list compact */
+        text-align: left; /* Aligns text to the left */
+    ">
+        <li style="
+            font-size: 20px;
+            margin: 20px;
+            color: #ff4500; /* Sets text color to orange */
+        ">
+            HTML is the foundation of web
+        </li>
+
+        <li style="
+            font-size: 20px;
+            margin: 20px;
+            color: #00e600; /* Sets text color to green */
+        ">
+            It's easy to learn and widely used
+        </li>
+
+        <li style="
+            font-size: 20px;
+            margin: 20px;
+            color: #007BFF; /* Sets text color to blue */
+        ">
+            Just because...
+        </li>
+    </ul>
+
+</body>
+</html>
